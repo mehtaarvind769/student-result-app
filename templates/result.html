@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="background-logo"></div>
+
+    <div class="container">
+        <div class="logo-container">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="School Logo" class="logo">
+        </div>
+
+        <h1 class="school-name">Mahatma Gandhi Govt. School, Bishanpura</h1>
+        <p class="session">Academic Session: 2025-2026</p>
+
+        <p><strong>Name:</strong> {{ student.name }}</p>
+        <p><strong>Roll Number:</strong> {{ roll }}</p>
+        <p><strong>Father's Name:</strong> {{ student.father_name }}</p>
+        <p><strong>Mother's Name:</strong> {{ student.mother_name }}</p>
+        <p><strong>Date of Birth:</strong> {{ student.dob }}</p>
+
+        <table class="marks-table">
+            <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Marks Obtained</th>
+                    <th>Total Marks</th>
+                    <th>Grade</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Mathematics</td>
+                    <td>{{ student.math }}</td>
+                    <td>100</td>
+                    <td>{% if student.math >= 90 %}A+{% elif student.math >= 80 %}A{% elif student.math >= 70 %}B{% else %}C{% endif %}</td>
+                </tr>
+                <tr>
+                    <td>Science</td>
+                    <td>{{ student.science }}</td>
+                    <td>100</td>
+                    <td>{% if student.science >= 90 %}A+{% elif student.science >= 80 %}A{% elif student.science >= 70 %}B{% else %}C{% endif %}</td>
+                </tr>
+                <tr>
+                    <td>English</td>
+                    <td>{{ student.english }}</td>
+                    <td>100</td>
+                    <td>{% if student.english >= 90 %}A+{% elif student.english >= 80 %}A{% elif student.english >= 70 %}B{% else %}C{% endif %}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div style="text-align: center;">
+            <a href="{{ url_for('logout') }}" class="logout-btn">Logout</a>
+        </div>
+    </div>
+
+</body>
+</html>
