@@ -1,0 +1,82 @@
+/* Background blur logo */
+.background-logo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("{{ url_for('static', filename='logo.png') }}") center center no-repeat;
+    background-size: 60%;
+    opacity: 0.05;
+    z-index: -1;
+}
+
+/* Container for the content */
+.container {
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 700px;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Header styles */
+.school-name {
+    text-align: center;
+    color: #004080;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.session {
+    text-align: center;
+    color: #0066cc;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Logo in center */
+.logo-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+}
+
+/* Table styling */
+.marks-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.marks-table th,
+.marks-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.marks-table th {
+    background-color: #f0f4f8;
+    color: #004080;
+}
+
+/* Logout button */
+.logout-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.logout-btn:hover {
+    background-color: #0056b3;
+}
