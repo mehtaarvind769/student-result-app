@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="background-logo"></div>
+
+    <div class="container">
+        <h1 class="school-name">Student Login</h1>
+        <form method="POST">
+            <label for="roll">🎓 Roll Number:</label>
+            <input type="text" name="roll" id="roll" required>
+
+            <label for="password">🔒 Password:</label>
+            <input type="password" name="password" id="password" required>
+
+            <input type="submit" value="Login">
+        </form>
+    </div>
+</body>
+</html>
